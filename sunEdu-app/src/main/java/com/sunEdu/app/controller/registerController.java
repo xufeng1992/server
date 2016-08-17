@@ -17,9 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "app/api",method = RequestMethod.POST)
 public class registerController {
 
-//    public String test () {
-//
-//    }
 
     public static void main(String[] argus){
         User user = new User();
