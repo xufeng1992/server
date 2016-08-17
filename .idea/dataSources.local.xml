@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - ruizhi_db@localhost" uuid="d2117ed7-0152-424c-9c06-614d14e6ded2">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>ruizhi_db.*</schema-pattern>
+      <default-schemas>ruizhi_db.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ruizhi_db@localhost" uuid="d2117ed7-0152-424c-9c06-614d14e6ded2">
+    <database-info product="MySQL" version="5.1.73-community" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="ruizhi_db"/>
+    <table name="t_assessment" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="teacher_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="evaluation_level" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="appraise_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_course" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_name" sqlType="VARBINARY" precision="15" scale="0" nullable="true" jdbcType="-3"/>
+      <column name="teaching_mode" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="grade_subject" sqlType="VARBINARY" precision="15" scale="0" nullable="true" jdbcType="-3"/>
+      <column name="willnum" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="sum_people" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="course_price" sqlType="DOUBLE" precision="5" scale="2" nullable="true" jdbcType="8"/>
+      <column name="schedule_id" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="schedule" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="period_sum" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="area" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="Teaching_address" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="longitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="latitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="course_introduction" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="courses_cover" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pubdate" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="end_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="publisher_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="best_seller" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="hot_flag" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_course_schedule" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="school_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="duration" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_extract" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="location" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="payment" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bank_name" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bank_card" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="alipay" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="withdraw_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="save_states" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_order" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="order_no" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="teacher_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="pay_status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="pay_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_report" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="teacher_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="message" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="whistleblower" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="report_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_sign" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="teacher_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="sign_location" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="longitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="latitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="sign_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_system_cover" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pic_name" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pic_url" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_user" schema="" catalog="ruizhi_db" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="nick_name" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="real_name" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="avatar" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mobile_no" sqlType="VARCHAR" precision="11" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <column name="longitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="latitude" sqlType="DECIMAL" precision="10" scale="7" nullable="true" jdbcType="3"/>
+      <column name="qualification_pic" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="school_name" sqlType="VARCHAR" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="school_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="level_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="flag" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="create_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="update_time" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="teacher_push" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>
